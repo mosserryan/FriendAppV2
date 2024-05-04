@@ -6,9 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers;
 
-[ApiController]
-[Route("api/[controller]")] // /api/users
-public class UsersController : ControllerBase //Takes text before word controller
+public class UsersController : BaseApiController //Takes text before word controller
 {
     private readonly DataContext context;
 
