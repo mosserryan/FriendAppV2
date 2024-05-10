@@ -1,6 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
 using API.Data;
 using API.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -23,6 +24,7 @@ public class UsersController : BaseApiController //Takes text before word contro
         return users;
     }
 
+    [Authorize]
     [HttpGet("{id}")] //api/users/id
     public async Task<ActionResult<AppUser>> GetUser(int id)
     {
