@@ -2,10 +2,7 @@
 
 namespace API.Interfaces;
 
-public class ITokenService
+public interface ITokenService
 {
-    static string CreateToken(AppUser user)
-    {
-        return "";
-    }
+    public string CreateToken(AppUser user);
 }
